@@ -1,4 +1,4 @@
-    class CompteManager extends React.Component {
+    class AccountManager extends React.Component {
 
         constructor(props, context) {
             super(props, context);
@@ -73,7 +73,7 @@
                 div.id = "container"+this.state.compteur;
                 let container = document.getElementById(div.id);
                 ReactDOM.render(
-                    <CompteManager nom={clientName} initialValue={clientValue}/>,
+                    <AccountManager nom={clientName} initialValue={clientValue}/>,
                     document.getElementById(div.id)
                 );
                 document.getElementById("fldClientName").value = "";
@@ -102,6 +102,8 @@
                 </span>
             }
         }
+        
+        //increment() créer un nouveau client qui est stocké dans un tableau dont le contenu est affiché dynamiquement dans le render d'indecrementor
 
 
     ReactDOM.render(
@@ -110,11 +112,13 @@
     );
 
     // ReactDOM.render(
-    //     <CompteManager nom="Mr Dupond" initialValue="2000"/>,
+    //     <AccountManager nom="Mr Dupond" initialValue="2000"/>,
     //     document.getElementById('container')
     // );
 
     // ReactDOM.render(
-    //     <CompteManager nom="Mr Bens" initialValue="500"/>,
+    //     <AccountManager nom="Mr Bens" initialValue="500"/>,
     //     document.getElementById('second_container')
     // );
+    
+    
